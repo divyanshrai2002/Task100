@@ -12,8 +12,9 @@ module.exports = (sequelize, DataTypes) => {
         url: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
+        }
     }, {
-        timestamps: true // 👈 IMPORTANT
+        tableName: "sociallinks",   
+        timestamps: true            
     });
 };

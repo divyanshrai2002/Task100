@@ -10,7 +10,7 @@ const Contact = require("../models/Contactus")(sequelize, Sequelize.DataTypes);
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false, 
     auth: {
         user: process.env.EmailUser,
         pass: process.env.Emailpass
@@ -40,7 +40,7 @@ router.post("/contact", async (req, res) => {
 
             const mailOptions = {
                 from: "raidivyansh86@gmail.com",
-                to: "divyanshrai@vega6.com",
+                to: "raidivyansh878@gmail.com",
                 subject: "New Contact Form Submission",
                 html: emailHtml,
             };

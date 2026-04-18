@@ -9,13 +9,12 @@ app.use(express.json());
 
 const contactRoutes = require("./router/ContactUs");
 app.use("/api", contactRoutes);
-// app.js
+
 const socialRoutes = require("./router/SocialRoutes");
 app.use("/api", socialRoutes);
 
-// Connect DB + Create Tables + Start Server
 sequelize
-    .sync() // 👈 THIS WAS MISSING
+    .sync() 
     .then(() => {
         console.log("✅ DB Connected & Tables Synced");
 
