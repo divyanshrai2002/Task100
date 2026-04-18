@@ -7,8 +7,11 @@ const sequelize = require("./Connection/db");
 
 app.use(express.json());
 
-const contactRoutes = require("./Controller/ContactUs");
+const contactRoutes = require("./router/ContactUs");
 app.use("/api", contactRoutes);
+// app.js
+const socialRoutes = require("./router/SocialRoutes");
+app.use("/api", socialRoutes);
 
 // Connect DB + Create Tables + Start Server
 sequelize
